@@ -3,6 +3,7 @@
 - setup the ground level app.
 - configured tailwind.
 - Login page(sign in).
+- Login page(sign up, same form converted into sign up form).
 
 
 
