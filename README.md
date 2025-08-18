@@ -9,6 +9,8 @@
 - Firebase setup.
 - Deploying our app to production.
 - Authentication using by firebase.
+- Creating a Redux store with user slice.
+- Build onAuthChangeState and navigate into the browser page.
 
 
 

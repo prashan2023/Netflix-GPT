@@ -3,8 +3,10 @@ import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "fireb
 import { useState,useRef } from "react";
 import  { CheckValidate1,CheckValidate2  }from "../utils/Validate";
 import { auth } from "../utils/Firebase";
+import { useNavigate } from "react-router";
 
 const Login =()=>{
+    const navigate = useNavigate();
     const [signIn, setSignIn] = useState(false);
     const [errorMessage,setErrorMessage] = useState(null);
     // const userName = useRef(null);
@@ -29,12 +31,13 @@ const Login =()=>{
             // Signed in 
             const user = userCredential.user;
             console.log(user);
+            navigate("/browser");
             // ...
             })
             .catch((error) => {
              const errorCode = error.code;
              const errorMessage = error.message;
-            setErrorMessage(errorCode+ " : " +errorMessage);
+             setErrorMessage(errorCode+ " : " +errorMessage);
             });
             
         }
@@ -54,6 +57,7 @@ const Login =()=>{
             // Signed up 
             const user = userCredential.user;
             console.log(user);
+            navigate("/browser");
             // ...
             })
             .catch((error) => {
