@@ -4,6 +4,11 @@
 - configured tailwind.
 - Login page(sign in).
 - Login page(sign up, same form converted into sign up form).
+- useRef Hook.
+- Validate the form data.
+- Firebase setup.
+- Deploying our app to production.
+- Authentication using by firebase.
 
 
 

@@ -1,6 +1,8 @@
 import Header from "./Header";
+import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 import { useState,useRef } from "react";
 import  { CheckValidate1,CheckValidate2  }from "../utils/Validate";
+import { auth } from "../utils/Firebase";
 
 const Login =()=>{
     const [signIn, setSignIn] = useState(false);
@@ -19,16 +21,49 @@ const Login =()=>{
         if(! signIn){
             const message1 = CheckValidate1(email.current.value,password.current.value);
             setErrorMessage(message1);
+            if(message1) return;
+
+             
+            signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+            .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            console.log(user);
+            // ...
+            })
+            .catch((error) => {
+             const errorCode = error.code;
+             const errorMessage = error.message;
+            setErrorMessage(errorCode+ " : " +errorMessage);
+            });
+            
         }
         
         else if(userName.current.value == ""){
             setErrorMessage("UserName can not be Empty")
         }
-        else if(userName.current.value){
+        else if(userName.current.value || signIn){
             const message2 = CheckValidate2(userName.current.value,email.current.value,password.current.value);
-            setErrorMessage(message2)
-        }
+            setErrorMessage(message2);
+            
+            if(message2) return;
         
+ 
+            createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
+            .then((userCredential) => {
+            // Signed up 
+            const user = userCredential.user;
+            console.log(user);
+            // ...
+            })
+            .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+
+            setErrorMessage(errorCode+ " : " +errorMessage);
+            // ..
+            });
+        }  
     
     };
 
