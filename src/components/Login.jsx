@@ -1,12 +1,14 @@
 import Header from "./Header";
-import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile } from "firebase/auth";
 import { useState,useRef } from "react";
-import  { CheckValidate1,CheckValidate2  }from "../utils/Validate";
+import  { CheckValidate1,CheckValidate2 }from "../utils/Validate";
 import { auth } from "../utils/Firebase";
-import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
+import { USER_AVATAR, USER_LOGO } from "../utils/constant";
 
 const Login =()=>{
-    const navigate = useNavigate();
+    const dispatch = useDispatch();
     const [signIn, setSignIn] = useState(false);
     const [errorMessage,setErrorMessage] = useState(null);
     // const userName = useRef(null);
@@ -29,10 +31,21 @@ const Login =()=>{
             signInWithEmailAndPassword(auth, email.current.value, password.current.value)
             .then((userCredential) => {
             // Signed in 
-            const user = userCredential.user;
-            console.log(user);
-            navigate("/browser");
+            updateProfile(auth.currentUser, {
+            displayName: "prashan", photoURL: USER_LOGO
+            }).then(() => {
+               
+              const {uid,email,displayName,photoURL} = auth.currentUser;
+              dispatch(addUser({uid: uid, email: email, displayName:displayName,photoURL:photoURL  }));
+              const user = auth.currentUser;
+              console.log(user);
             // ...
+            }).catch((error) => {
+            // An error occurred
+            // ...
+           });
+
+           
             })
             .catch((error) => {
              const errorCode = error.code;
@@ -43,7 +56,7 @@ const Login =()=>{
         }
         
         else if(userName.current.value == ""){
-            setErrorMessage("UserName can not be Empty")
+            setErrorMessage("UserName can not be Empty");
         }
         else if(userName.current.value || signIn){
             const message2 = CheckValidate2(userName.current.value,email.current.value,password.current.value);
@@ -56,8 +69,19 @@ const Login =()=>{
             .then((userCredential) => {
             // Signed up 
             const user = userCredential.user;
-            console.log(user);
-            navigate("/browser");
+            updateProfile(auth.currentUser, {
+            displayName: userName.current.value, photoURL: USER_AVATAR
+            }).then(() => {
+              const {uid,email,displayName,photoURL} = auth.currentUser;
+              dispatch(addUser({uid: uid, email: email, displayName:displayName,photoURL:photoURL  }));
+              
+             
+              console.log(auth.currentUser)
+            // ...
+            }).catch((error) => {
+               setErrorMessage(error.message);
+            });
+
             // ...
             })
             .catch((error) => {

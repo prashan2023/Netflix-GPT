@@ -11,6 +11,12 @@
 - Authentication using by firebase.
 - Creating a Redux store with user slice.
 - Build onAuthChangeState and navigate into the browser page.
+- Update Profile.
+- BugFix: Sign up user displayName and profile picture update.
+- BugFix: Sign in user display profile picture.
+- BugFix: If the user is not logged in Re-direct browse to Login page and Vice-versa.
+- unsubscribed to the onAuthStateChanged callback.
+- Add the all hardcoded value into constant file. 
 
 
 
