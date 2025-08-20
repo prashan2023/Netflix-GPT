@@ -14,3 +14,5 @@ export const options = {
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjMTY3MmVmZDY3ZjI1NTExYTdkYzE2MDEwYjQzNzY3YyIsIm5iZiI6MTc1NTYyNDU3NS4zNjksInN1YiI6IjY4YTRiNDdmODhjNDFmODI0NjgzNDZhMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.TXqkd319wBYnRbDnEs-6MtGn_mS9woLT6h89-o2ETAo'
   }
 };
+
+export const TRAILER_URL = "https://api.themoviedb.org/3/movie/";

@@ -22,6 +22,17 @@
 - Adding movie data to the store(movieSlice).
 - Dispatch the addNowPlayingMovie into my store movieSlice.
 - Create a custom Hook for usegetNowPlayingMovies.
+- Planing the browse page UI.
+      - Maincontainer.
+            -Video Background.
+            -Video Title.
+      - Secondarycontainer.
+            -Movies List*N ...
+                -Movies Cards*N ...
+
+- Create a addTrailerVideo reducers into my movieSlice(Beacuse of take to my youtube trailer key).
+- Create a custom Hook for Trailer video.( fetch trailler video & updating store by trailler data).
+- Build the video Background.
 
 
 
@@ -43,4 +54,11 @@
 - NetflixGPT 
       - Search Bar.
       - Movie Suggestions.
+
+
+- How can I plane a Browse page.
+   
+      
+            
+
 

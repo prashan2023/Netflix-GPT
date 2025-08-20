@@ -38,7 +38,6 @@ const Login =()=>{
               const {uid,email,displayName,photoURL} = auth.currentUser;
               dispatch(addUser({uid: uid, email: email, displayName:displayName,photoURL:photoURL  }));
               const user = auth.currentUser;
-              console.log(user);
             // ...
             }).catch((error) => {
             // An error occurred
