@@ -1,9 +1,11 @@
-import React from 'react'
+import MovieLists from "./MovieLists";
 
 const Secondarycontainer = () => {
   return (
-    <div>Secondarycontainer</div>
+    <div>
+      <MovieLists/>
+    </div>
   )
 }
 
-export default Secondarycontainer
+export default Secondarycontainer;

@@ -34,6 +34,22 @@
 - Create a custom Hook for Trailer video.( fetch trailler video & updating store by trailler data).
 - Build the video Background.
 
+# Secondary Component,
+- Build the secondary component.
+- planing:
+     MovieList -NowPlaying,
+     MovieList -Popular,
+     MovieList -Top Rated,
+     MovieList -Upcoming,
+- Build Movie List.
+- Build Movie Card Also.
+- TMDB Image CDN URL.
+- Made the Browser page amazing with TailwindCSS.
+- usePopularMovies Custom Hook.
+- useTopRatedMovies Custom Hook.
+- useUpcomingMovies Cusom Hook.
+     
+
 
 
 
