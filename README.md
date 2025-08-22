@@ -48,6 +48,11 @@
 - usePopularMovies Custom Hook.
 - useTopRatedMovies Custom Hook.
 - useUpcomingMovies Cusom Hook.
+
+# Implementing GPT feature.
+- GPT Search page.
+- GPT Search bar.
+- Build a Multi-language Feature in our App.
      
 
 

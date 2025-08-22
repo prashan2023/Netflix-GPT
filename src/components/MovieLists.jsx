@@ -10,7 +10,7 @@ const movies4 = useSelector((store) => store?.movies?.UpcomingMovies);
   return (
     <div>
       {movies1 &&
-      <MovieCards title={"NowPlayingMovies"} movies={movies1}/>}
+      <MovieCards title={"NowPlaying Movies"} movies={movies1}/>}
       {movies2 &&
       <MovieCards title={"Popular"} movies={movies2}/>}
       {movies3 &&
@@ -21,4 +21,4 @@ const movies4 = useSelector((store) => store?.movies?.UpcomingMovies);
   )
 }
 
-export default MovieLists
+export default MovieLists;

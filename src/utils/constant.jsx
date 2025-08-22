@@ -18,3 +18,27 @@ export const options = {
 export const TRAILER_URL = "https://api.themoviedb.org/3/movie/";
 
 export const IMAGE_CDN_URL = "https://image.tmdb.org/t/p/w500";
+
+export const LanguageToggle = [
+    {
+        identifier: "en",
+        name: "English"
+    },
+    {
+        identifier: "ta",
+        name: "Tamil"
+    },
+    {
+        identifier: "si",
+        name: "Sinhala"
+    },
+    {
+        identifier: "hi",
+        name: "Hindi"
+    },
+    {
+        identifier: "ma",
+        name: "Malayalam"
+    },
+    
+];
