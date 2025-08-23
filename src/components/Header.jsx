@@ -22,6 +22,7 @@ const Header = () => {
         } else {
             dispatch(removeUser());
             navigate("/");
+            // dispatch(getToggleBoolean(! gptValue));
          }
         });
 
@@ -30,11 +31,11 @@ const Header = () => {
   const handleSignOut =()=>{
      signOut(auth).then(() => {
      }).catch((error) => {
-         navigate("/error");
+        navigate("/error");
     });
   };
   const handleToggleGpt =()=>{
-       dispatch(getToggleBoolean());
+       dispatch(getToggleBoolean(! gptValue));
   };
 
   return (

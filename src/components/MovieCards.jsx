@@ -4,7 +4,7 @@ const MovieCards = ({title,movies}) => {
  
   return (
     <div className="bg-black">
-        <div className="ml-10 -my-60 relative pb-65">
+        <div className="ml-10 -my-80 relative pb-75">
             <h1 className="p-4 text-4xl text-white">{title}</h1>
             <div className="flex overflow-x-scroll no-scrollbar ml-6">
               <div className="flex p-4">
