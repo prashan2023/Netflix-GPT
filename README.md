@@ -53,7 +53,11 @@
 - GPT Search page.
 - GPT Search bar.
 - Build a Multi-language Feature in our App.
-     
+- Get Open AI Api key.
+- Get search Api key.
+- Fetched gptMovieSuggestions from TMDB.
+- Create gptSlice added data.
+- Reused Movie list components to make.  
 
 
 
