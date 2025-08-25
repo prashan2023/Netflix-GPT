@@ -37,7 +37,8 @@ const Header = () => {
   const handleToggleGpt =()=>{
        dispatch(getToggleBoolean(! gptValue));
   };
-
+   
+  
   return (
     <div className="absolute p-5 w-full bg-gradient-to-b from-black z-1 flex items-center justify-between">
         <img className="w-44 " src={LOGO}

@@ -8,7 +8,7 @@ const movies3 = useSelector((store) => store?.movies?.TopRatedMovies);
 const movies4 = useSelector((store) => store?.movies?.UpcomingMovies);   
 
   return (
-    <div>
+    <div className="bg-black">
       {movies1 &&
       <MovieCards title={"NowPlaying Movies"} movies={movies1}/>}
       {movies2 &&

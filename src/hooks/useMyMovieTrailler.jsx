@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
 import { options } from '../utils/constant';
-import { useDispatch} from 'react-redux';
+import { useDispatch, useSelector} from 'react-redux';
 import { addTrailervideo  } from '../utils/moviesSlice';
 import { TRAILER_URL } from '../utils/constant';
 
 const useMyMovieTrailler = (id) => {
 
   const dispatch = useDispatch();
+  const TrailerId = useSelector((store) => store.movies.TrailerVideo);
   const getMyMovieTrailer = async()=>{
       const data = await fetch(TRAILER_URL + id + "/videos?language=en-US", options);
       const json = await data.json();
@@ -17,7 +18,9 @@ const useMyMovieTrailler = (id) => {
   };
 
   useEffect(() =>{
-      getMyMovieTrailer()
+    if(!TrailerId){
+       getMyMovieTrailer()
+    } 
   },[]);
 
   

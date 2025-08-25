@@ -11,7 +11,7 @@ export const options = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjMTY3MmVmZDY3ZjI1NTExYTdkYzE2MDEwYjQzNzY3YyIsIm5iZiI6MTc1NTYyNDU3NS4zNjksInN1YiI6IjY4YTRiNDdmODhjNDFmODI0NjgzNDZhMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.TXqkd319wBYnRbDnEs-6MtGn_mS9woLT6h89-o2ETAo'
+    Authorization:  import.meta.env.VITE_TMDB_API_KEY,
   }
 };
 
@@ -42,3 +42,5 @@ export const LanguageToggle = [
     },
     
 ];
+ 
+export const SEARCHTMDB_URL = "https://api.themoviedb.org/3/search/movie?query=The%20conjuring&include_adult=false&language=en-US&page=1";

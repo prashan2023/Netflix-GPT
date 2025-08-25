@@ -1,10 +1,9 @@
 import PosterCard from "./PosterCard";
 
 const MovieCards = ({title,movies}) => {
- 
   return (
     <div className="bg-black">
-        <div className="ml-10 -my-80 relative pb-75">
+        <div className="ml-10 -my-65 relative pb-75">
             <h1 className="p-4 text-4xl text-white">{title}</h1>
             <div className="flex overflow-x-scroll no-scrollbar ml-6">
               <div className="flex p-4">

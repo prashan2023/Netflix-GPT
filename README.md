@@ -58,6 +58,10 @@
 - Fetched gptMovieSuggestions from TMDB.
 - Create gptSlice added data.
 - Reused Movie list components to make.  
+- Movie suggestion container.
+- Memoization.
+- Add .env file.
+- Adding .env file to .gitignore file.
 
 
 

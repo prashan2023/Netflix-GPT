@@ -4,6 +4,7 @@ const PosterCard = ({posterPath,title,id}) => {
   const moviehandleClick =()=>{
     console.log(id);
   }
+  if(! posterPath) return null;
   return (
     <div className="w-56 h-60 cursor-pointer" onClick={moviehandleClick} > 
         <img 
@@ -14,4 +15,4 @@ const PosterCard = ({posterPath,title,id}) => {
   )
 }
 
-export default PosterCard
+export default PosterCard;
