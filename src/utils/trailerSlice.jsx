@@ -6,8 +6,8 @@ const trailerSlice = createSlice({
         PosterId: null,
         TrailerKey: null,
         VedioState: false,
-        VedioTitle: "magadhira",
-        PublishedDate: "2",
+        VedioTitle: null,
+        PublishedDate: null,
         MoreInfo: "This is so nice movie to watch"
     },
     reducers:{

@@ -68,9 +68,11 @@
 
 - Fetch the movie trailer.
 - create a useFetchTrailerVedio hook for trailer video fetching.
-- create a trailerSlice.( and make actions such as getPosterId, getTrailerKey, getVedioState, getVedioTitle, getPublishedDate, getMoreInfo).
+- create a trailerSlice.( and make actions such as getPosterId, getTrailerKey, getVedioState,    getVedioTitle, getPublishedDate, getMoreInfo).
 - create a Play Button & MoreInfo Button functionality.
 - For the MoreInfo button make as a toggle functionality.
+- Hide the Optional multi-language selector from my tralier video page.
+- correct some bug of the application.
 
 
 # Features

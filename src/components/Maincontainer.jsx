@@ -5,12 +5,13 @@ const Maincontainer = () => {
 
   const movies = useSelector((store) => store?.movies?.NowPlayingMovies);
   const TrailerKey = useSelector((store) => store.movies?.Trailervideo);
+  const { PublishedDate,MoreInfo } = useSelector((store) => store.movies);
   if(! movies)  return;
   const {title,overview,id} = movies[0];
   
   return (
     <div>
-       <VideoTitle title={title} overview={overview}/>
+       <VideoTitle title={title} overview={overview} publishedDate={PublishedDate} moreInfo={MoreInfo}/>
        <VideoBackground id={id} TrailerKey={TrailerKey}/>
     </div>
   )

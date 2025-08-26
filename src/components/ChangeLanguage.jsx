@@ -10,9 +10,9 @@ const ChangeLanguage = () => {
   
   return (
     <div className="p-1 bg-black rounded-lg font-bold text-white text-lg mr-4">
-        <select className="bg-black p-1 m-1" onChange={handleLanguageChange}>
+        <select className="bg-black p-1 m-1 cursor-pointer" onChange={handleLanguageChange}>
             {LanguageToggle.map((language) =>(
-            <option key={language.name} value={language.identifier} >{language.name}</option>
+            <option key={language.name} value={language.identifier} className="cursor-pointer">{language.name}</option>
             ))}
         </select>    
     </div>

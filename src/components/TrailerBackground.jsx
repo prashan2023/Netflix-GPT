@@ -7,11 +7,13 @@ import VideoTitle from './VideoTitle';
 const TrailerBackground = () => {
   const {PosterId,TrailerKey,VedioTitle,PublishedDate,MoreInfo} = useSelector((store) => store.trailer);
   useFetchTrailerVedio(PosterId);
+
+  if(!MoreInfo && !PublishedDate) return;
   
   return (
     <div>
         <Header/>
-        <div className='fixed'>
+        <div className="sticky">
             <VideoTitle title={VedioTitle} overview={""} publishedDate={PublishedDate} moreInfo={MoreInfo}/>
             <VideoBackground id={PosterId} TrailerKey={TrailerKey}/>
         </div>

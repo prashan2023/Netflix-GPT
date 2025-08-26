@@ -1,10 +1,10 @@
 const languageConstant = {
     "en" : {
-        placeholder:"What would you like to watch today?",
+        placeholder:"What Kind of genres would you like to watch today?",
         search: "Search",
     },
     "ta" : {
-        placeholder:"இன்று நீங்கள் என்ன பார்க்க விரும்புகிறீர்கள்?",
+        placeholder:"இன்று நீங்கள் எந்த வகையான நிகழ்ச்சிகளைப் பார்க்க விரும்புகிறீர்கள்?",
         search: "தேடல்",
     },
     "si" : {

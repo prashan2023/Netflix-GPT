@@ -13,6 +13,7 @@ const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((store) =>store.user);
+  const trailerState = useSelector((store) => store.trailer.VedioState);
   const gptValue = useSelector((store) => store.gpt.gptToggleBoolean);
   useEffect(() =>{
       const unsubscribed = onAuthStateChanged(auth, (user) => {
@@ -52,20 +53,20 @@ const Header = () => {
           <div className="flex  items-center">
           
           <div className="flex">
-          {!gptValue && (
+          {!gptValue && !trailerState && (
             <ChangeLanguage/>
           )}
           
           <button 
            onClick={handleToggleGpt}
-           className="py-2 px-5 text-sm bg-purple-700 text-white mr-5 font-bold rounded-lg"
+           className="py-2 px-5 text-sm bg-purple-700 text-white mr-5 font-bold rounded-lg cursor-pointer"
           >
            {gptValue?"GPT Search":"Home Page"} 
           </button>
           </div>
           <img className="w-15 h-15 rounded-full border-2 border-white opacity-80" src={user?.photoURL} alt="Signout logo"/>
           <div onClick={handleSignOut}>
-            <button className="font-bold text-sm text-white cursor-pointer pl-2">(Sign Out)</button>
+            <button className="font-bold text-sm text-white cursor-pointer pl-2 ">(Sign Out)</button>
           </div>
           </div>
         )}
