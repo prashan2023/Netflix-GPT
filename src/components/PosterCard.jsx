@@ -1,9 +1,15 @@
 import { IMAGE_CDN_URL } from "../utils/constant";
-import { useParams } from "react-router";
+import { getPosterId, getTrailerKey, getVedioState, getVideoTitle } from "../utils/trailerSlice";
+import { useDispatch } from "react-redux";
+
 const PosterCard = ({posterPath,title,id}) => {
+  const dispatch = useDispatch();
   const moviehandleClick =()=>{
-    console.log(id);
-  }
+        dispatch(getPosterId(id));
+        dispatch(getVedioState(true)); 
+        dispatch(getTrailerKey(title));
+  };
+
   if(! posterPath) return null;
   return (
     <div className="w-56 h-60 cursor-pointer" onClick={moviehandleClick} > 

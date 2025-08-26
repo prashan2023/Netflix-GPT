@@ -34,6 +34,7 @@
 - Create a custom Hook for Trailer video.( fetch trailler video & updating store by trailler data).
 - Build the video Background.
 
+
 # Secondary Component,
 - Build the secondary component.
 - planing:
@@ -63,7 +64,13 @@
 - Add .env file.
 - Adding .env file to .gitignore file.
 
+# Implimenting Trailer VideoBackGround.
 
+- Fetch the movie trailer.
+- create a useFetchTrailerVedio hook for trailer video fetching.
+- create a trailerSlice.( and make actions such as getPosterId, getTrailerKey, getVedioState, getVedioTitle, getPublishedDate, getMoreInfo).
+- create a Play Button & MoreInfo Button functionality.
+- For the MoreInfo button make as a toggle functionality.
 
 
 # Features

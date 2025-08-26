@@ -11,6 +11,7 @@ const useMyMovieTrailler = (id) => {
   const getMyMovieTrailer = async()=>{
       const data = await fetch(TRAILER_URL + id + "/videos?language=en-US", options);
       const json = await data.json();
+     
       const trailer = json?.results?.filter((video) => video.type == "Trailer");
       const MovieClipKey = trailer ? (trailer[0].key):video[0];
       dispatch(addTrailervideo(MovieClipKey));

@@ -4,9 +4,9 @@ import MovieCards from './MovieCards';
 
 const SearchMoviesContainer = () => {
   const {gptMovies,movieResult} = useSelector((store) => store.gpt);
-  console.log("list:",gptMovies);
-  console.log(movieResult)
-  if(!gptMovies || !movieResult) return;
+   
+  if(!gptMovies) return;
+  if(!movieResult) return;
   return(
     <div className="mt-80 p-4 opacity-85">
         {gptMovies.map((movie,index) => (

@@ -11,7 +11,7 @@ export const options = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization:  import.meta.env.VITE_TMDB_API_KEY,
+    Authorization: import.meta.env.VITE_TMDB_API_KEY,
   }
 };
 
@@ -43,4 +43,4 @@ export const LanguageToggle = [
     
 ];
  
-export const SEARCHTMDB_URL = "https://api.themoviedb.org/3/search/movie?query=The%20conjuring&include_adult=false&language=en-US&page=1";
+export const SEARCHTMDB_URL = "https://api.themoviedb.org/3/search/movie?query=The%20";

@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { LOGO } from "../utils/constant";
 import { getToggleBoolean } from '../utils/gptSlice';
 import ChangeLanguage from './ChangeLanguage';
+import { getVedioState } from '../utils/trailerSlice';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -36,6 +37,7 @@ const Header = () => {
   };
   const handleToggleGpt =()=>{
        dispatch(getToggleBoolean(! gptValue));
+       dispatch(getVedioState(false));
   };
    
   

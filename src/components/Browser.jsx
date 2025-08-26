@@ -7,9 +7,11 @@ import useTopratedMovies from "../hooks/useTopratedMovies";
 import useUpcomingMovies from "../hooks/useUpcomingMovies";
 import GptSearchPage from "./GptSearchPage";
 import { useSelector } from "react-redux";
+import TrailerBackground from "./TrailerBackground";
 
 const Browser = () => {
   const gptValue = useSelector((store) => store.gpt.gptToggleBoolean);
+  const trailerVedioState = useSelector((store) => store.trailer.VedioState);
   useNowPlayingMovies();
   usePopularMovies();
   useTopratedMovies();
@@ -17,13 +19,27 @@ const Browser = () => {
 
   return (
      <>
-      <Header/>
-      {gptValue?(
+        {trailerVedioState?(
+          <>
+          <Header/>
+          <TrailerBackground/>
+          </>
+        ):(
+        <>
+        <Header/>
+        {gptValue?(
         <>
          <Maincontainer/>
          <Secondarycontainer/>
         </>
-      ): <GptSearchPage/>}
+        ):<GptSearchPage/>
+        }
+        </>)}
+        
+        
+        
+        
+      
      </>
   )
 }
