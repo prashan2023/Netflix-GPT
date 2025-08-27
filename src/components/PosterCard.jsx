@@ -14,7 +14,7 @@ const PosterCard = ({posterPath,title,id}) => {
   return (
     <div className="w-56 h-60 cursor-pointer" onClick={moviehandleClick} > 
         <img 
-         className="w-52 h-56 " 
+         className="w-40 h-44 md:w-52 md:h-56 " 
          alt={title} 
          src={IMAGE_CDN_URL + posterPath}/>
     </div>

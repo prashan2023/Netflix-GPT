@@ -44,30 +44,34 @@ const Header = () => {
   
   return (
     <div className="absolute p-5 w-full bg-gradient-to-b from-black z-1 flex items-center justify-between">
-        <img className="w-44 " src={LOGO}
+        <img className="w-30 md:w-44 " src={LOGO}
          alt='logo'/>
         
         
 
         {user  && (
-          <div className="flex  items-center">
-          
-          <div className="flex">
+          <div className="flex items-center justify-between">
+     
+          <div className="flex px-8 md:px-0 justify-between ">
           {!gptValue && !trailerState && (
             <ChangeLanguage/>
           )}
-          
+          </div>
+          <div className='-pl-10 md:pl-0'>
           <button 
            onClick={handleToggleGpt}
-           className="py-2 px-5 text-sm bg-purple-700 text-white mr-5 font-bold rounded-lg cursor-pointer"
+           className="py-1 md:py-2 px-2 md:px-5 text-[10px] md:text-sm bg-purple-700 text-white mr-5 font-bold rounded-lg cursor-pointer"
           >
            {gptValue?"GPT Search":"Home Page"} 
           </button>
           </div>
-          <img className="w-15 h-15 rounded-full border-2 border-white opacity-80" src={user?.photoURL} alt="Signout logo"/>
-          <div onClick={handleSignOut}>
-            <button className="font-bold text-sm text-white cursor-pointer pl-2 ">(Sign Out)</button>
+          <div>
+          <img className="w-15 h-15 rounded-full border-2 border-white opacity-80 hidden md:block" src={user?.photoURL} alt="Signout logo"/>
           </div>
+          <div onClick={handleSignOut}>
+            <button className="font-bold text-[12px] md:text-sm text-white cursor-pointer pl-2 ">(Sign Out)</button>
+          </div>
+          
           </div>
         )}
            

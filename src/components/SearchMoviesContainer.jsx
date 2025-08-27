@@ -8,7 +8,7 @@ const SearchMoviesContainer = () => {
   if(!gptMovies) return;
   if(!movieResult) return;
   return(
-    <div className="mt-80 p-4 opacity-85">
+    <div className="mt-10 md:mt-80 p-4 opacity-85">
         {gptMovies.map((movie,index) => (
             <MovieCards 
             key={index} 

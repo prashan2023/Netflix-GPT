@@ -73,6 +73,7 @@
 - For the MoreInfo button make as a toggle functionality.
 - Hide the Optional multi-language selector from my tralier video page.
 - correct some bug of the application.
+- Make my app responsive for mobile view and desktop view.
 
 
 # Features

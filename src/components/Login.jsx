@@ -95,14 +95,14 @@ const Login =()=>{
     };
 
     return(
-        <div className="relative  bg-gradient-to-br from-black ">
+        <div className="relative bg-gradient-to-br from-black ">
             <Header/>
             <div className="absolute">
-                <img src="https://assets.nflxext.com/ffe/siteui/vlv3/258d0f77-2241-4282-b613-8354a7675d1a/web/LK-en-20250721-TRIFECTA-perspective_0f9c2293-736d-4443-83ff-90ae2fbf1a7d_large.jpg"
+                <img className="fixed w-screen h-full object-cover" src="https://assets.nflxext.com/ffe/siteui/vlv3/258d0f77-2241-4282-b613-8354a7675d1a/web/LK-en-20250721-TRIFECTA-perspective_0f9c2293-736d-4443-83ff-90ae2fbf1a7d_large.jpg"
                  alt="image"/>
             </div>
-            <form onSubmit={(e) => e.preventDefault()} className="bg-black absolute rounded-lg m-auto right-0 left-0 w-3/12 p-10 text-start my-40 text-white opacity-85">
-                {signIn ?<h1 className="text-3xl font-bold my-4">Sign Up</h1>:
+            <form onSubmit={(e) => e.preventDefault()} className="bg-black absolute rounded-lg m-auto right-0 left-0 w-full md:w-3/12 p-15 md:p-10 text-start my-45 md:my-40 text-white opacity-85">
+                {signIn ?<h1 className="text-xl md:text-3xl font-bold my-4">Sign Up</h1>:
                  <h1 className="text-3xl font-bold my-4">Sign In</h1>
                 }
                 {/* <h1 className="text-3xl font-bold my-4">{signIn ? "Sign Up": "Sign In"}</h1> */}
@@ -111,7 +111,7 @@ const Login =()=>{
                  ref={userName}
                  type="UserName"
                  placeholder="UserName"
-                 className="px-4 py-2 my-4 bg-gray-700 w-full font-medium"
+                 className="px-4 py-2 my-4 bg-gray-700 w-2/3 md:w-full font-medium"
                 />
                 }
                 <input
@@ -132,6 +132,7 @@ const Login =()=>{
                 </div>
                 <h1 onClick={handleClick} className="cursor-pointer"> { signIn ? "Already register? Sign In now.":"New to Netflix? Sign Up now."}</h1>
             </form>
+        
         </div>
     )
 };

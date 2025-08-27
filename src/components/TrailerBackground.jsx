@@ -13,7 +13,7 @@ const TrailerBackground = () => {
   return (
     <div>
         <Header/>
-        <div className="sticky">
+        <div className="relative pt-[15%] md:pt-0">
             <VideoTitle title={VedioTitle} overview={""} publishedDate={PublishedDate} moreInfo={MoreInfo}/>
             <VideoBackground id={PosterId} TrailerKey={TrailerKey}/>
         </div>
