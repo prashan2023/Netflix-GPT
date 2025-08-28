@@ -7,8 +7,7 @@ import VideoTitle from './VideoTitle';
 const TrailerBackground = () => {
   const {PosterId,TrailerKey,VedioTitle,PublishedDate,MoreInfo} = useSelector((store) => store.trailer);
   useFetchTrailerVedio(PosterId);
-
-  if(!MoreInfo && !PublishedDate) return;
+ 
   
   return (
     <div>
